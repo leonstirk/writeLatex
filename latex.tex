@@ -1,0 +1,90 @@
+\documentclass[10pt]{article}
+
+\usepackage[absolute]{textpos}
+
+%% \usepackage[margin=1in]{geometry}
+\usepackage[a4paper, total={6in, 8in}, margin=1in]{geometry}
+
+\linespread{1.2}\selectfont
+
+\usepackage{color}
+\definecolor{illum}{RGB}{55,73,93}
+
+\usepackage{sectsty}
+\sectionfont{\color{illum}}
+\subsectionfont{\color{illum}}
+\subsubsectionfont{\color{illum}}
+
+\parindent0pt
+\setlength{\parskip}{0.8\baselineskip}
+\raggedright
+\pagestyle{empty}
+\usepackage{graphicx}
+\graphicspath{ {./assets/}{./images/} }
+
+\usepackage{enumitem}
+\setenumerate[1]{label=(\alph*)}
+\setenumerate[0]{label=(\roman*)}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\usepackage{textcomp}
+% fancyhdr headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}% Remove header rule
+\fancyhf{}% Remove all header and footer contents
+% \fancyhead{}% Remove all header contents
+
+\usepackage[table]{xcolor}
+\usepackage{array}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\makeatletter
+\def\@seccntformat#1{\@ifundefined{#1@cntformat}%
+  {\csname the#1\endcsname\quad}%       default
+  {\csname #1@cntformat\endcsname}}%    enable individual control
+\newcommand\section@cntformat{}
+\makeatother
+
+\newcommand{\info}[1]{\makebox[2.5cm][l]{#1}\hrulefill\hss\par}
+\newcommand{\infoTwoCol}[1]{\makebox[2.5cm][l]{#1}\hrulefill\hss\par}
+\newcommand{\infoFar}[1]{\makebox[5cm][l]{#1}\hrulefill\hss\par}
+\newcommand{\infoFlush}[1]{\hrulefill\hss\par}
+
+\cfoot{\footnotesize Illuminate Tutoring 2017 \textcolor{illum}{www.illuminatetutor.co} }
+
+\begin{document}
+
+\begin{textblock*}{80pt}[0,0](1in,1in)
+  \includegraphics[width=80pt]{titlePic}
+\end{textblock*}
+
+\begin{flushright}
+  \begin{textblock*}{190pt}[1,0](7.5in, 1in)
+    Illuminate Tutoring
+
+    11/35 Tennyson Street
+
+    Dunedin
+
+    9016
+
+    021 034 2105
+
+    info@illuinatetutor.co
+
+    www.illuminatetutor.co
+  \end{textblock*}
+\end{flushright}
+
+\vspace*{12cm}
+
+\begin{center}
+  \section*{Tutor contract}
+  \subsection*{Level 4}
+  \subsection*{April 2017}
+\end{center}
+
+\clearpage
